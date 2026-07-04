@@ -1,0 +1,65 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap");
+
+/* ---------- LIGHT THEME ---------- */
+body.light{
+  --bg:#f5f7fb;
+  --surface:#f8fafc;
+  --navbar:#ffffff;
+  --text:#111827;
+  --text-light:#6b7280;
+  --border:#e5e7eb;
+  --primary:#2563eb;
+  --card:#ffffff;
+  --shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+body.dark{
+  --bg:#08111f;
+  --surface:#162033;
+  --navbar:#09101d;
+  --text:#f8fafc;
+  --text-light:#94a3b8;
+  --border:#1f2937;
+  --primary:#3b82f6;
+  --card:#111c2f;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+/* ---------- RESET ---------- */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.35s;
+}
+
+#root{
+  min-height:100vh;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  cursor:pointer;
+  font-family:inherit;
+}
+
+input,
+textarea,
+select{
+  font-family:inherit;
+}

@@ -1,0 +1,411 @@
+.events-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: 60px;
+  transition: .3s;
+}
+
+/* HERO */
+
+.events-hero{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.events-hero h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.events-hero p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.8;
+  opacity:.95;
+}
+
+/* SEARCH */
+
+.search-section{
+  display:flex;
+  justify-content:center;
+  margin:35px 20px 25px;
+}
+
+.search-input{
+
+  width:90%;
+  max-width:850px;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  border:1px solid var(--border);
+
+  background:var(--surface);
+
+  color:var(--text);
+
+  font-size:16px;
+
+  transition:.3s;
+
+}
+
+.search-input::placeholder{
+  color:var(--text-light);
+}
+
+.search-input:focus{
+  outline:none;
+  border-color:var(--primary);
+}
+
+/* FILTER */
+
+.filter-section{
+
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:40px;
+
+}
+
+.filter-section button{
+
+padding:11px 22px;
+
+border-radius:30px;
+
+border:1px solid var(--border);
+
+background:var(--card);
+
+color:var(--text);
+
+transition:.3s;
+
+}
+
+.filter-section button:hover{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.filter-section .active{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+/* GRID */
+
+.events-grid{
+
+width:92%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+gap:30px;
+
+}
+
+/* CARD */
+
+.event-card{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.event-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* IMAGE */
+
+.event-image{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.event-card:hover .event-image{
+
+transform:scale(1.06);
+
+}
+
+/* CONTENT */
+
+.event-content{
+
+padding:22px;
+
+color:var(--text);
+
+}
+
+/* TOP ROW */
+
+.top-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:15px;
+
+}
+
+/* BADGE */
+
+.badge{
+
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+color:white;
+
+padding:7px 16px;
+
+border-radius:30px;
+
+font-size:13px;
+
+font-weight:600;
+
+}
+
+/* SEATS */
+
+.seat-box{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-end;
+
+gap:6px;
+
+}
+
+.seat{
+
+font-size:14px;
+
+font-weight:600;
+
+color:#22c55e;
+
+}
+
+.seat-progress{
+
+width:90px;
+
+height:8px;
+
+background:#d1d5db;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.seat-fill{
+
+height:100%;
+
+background:linear-gradient(90deg,#22c55e,#16a34a);
+
+border-radius:20px;
+
+}
+
+/* TITLE */
+
+.event-content h2{
+
+margin:12px 0;
+
+font-size:24px;
+
+font-weight:700;
+
+color:var(--text);
+
+}
+
+/* DESCRIPTION */
+
+.description{
+
+color:var(--text-light);
+
+font-size:15px;
+
+line-height:1.8;
+
+min-height:75px;
+
+margin-bottom:18px;
+
+}
+
+/* INFO */
+
+.event-info{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px;
+
+margin:10px 0;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:10px;
+
+font-size:15px;
+
+color:var(--text);
+
+}
+
+.icon{
+
+color:var(--primary);
+
+font-size:18px;
+
+}
+
+/* BUTTON */
+
+.register-btn{
+
+width:100%;
+
+margin-top:18px;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+background:var(--primary);
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.register-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 12px 25px rgba(37,99,235,.30);
+
+}
+
+.registered{
+
+width:100%;
+
+margin-top:18px;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+background:#16a34a;
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.events-hero h1{
+
+font-size:2.2rem;
+
+}
+
+.events-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.event-image{
+
+height:200px;
+
+}
+
+.search-input{
+
+width:100%;
+
+}
+
+}
