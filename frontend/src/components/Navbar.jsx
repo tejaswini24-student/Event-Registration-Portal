@@ -1,12 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FiSun, FiMoon, FiUser } from "react-icons/fi";
 import { useTheme } from "../context/ThemeContext";
 import "./Navbar.css";
 
 export default function Navbar() {
-
   const navigate = useNavigate();
-
   const { theme, toggleTheme } = useTheme();
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -25,23 +23,44 @@ export default function Navbar() {
 
       <div className="nav-links">
 
-        <Link to="/" className="nav-link">
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
           Home
-        </Link>
+        </NavLink>
 
-        <Link to="/events" className="nav-link">
+        <NavLink
+          to="/events"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
           Events
-        </Link>
+        </NavLink>
 
         {user && (
-          <Link to="/dashboard" className="nav-link">
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
             Dashboard
-          </Link>
+          </NavLink>
         )}
 
-        <Link to="/about" className="nav-link">
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
           About
-        </Link>
+        </NavLink>
 
       </div>
 
@@ -72,19 +91,19 @@ export default function Navbar() {
           </>
         ) : (
           <>
-            <Link
-              className="login-btn"
+            <NavLink
               to="/login"
+              className="login-btn"
             >
               Login
-            </Link>
+            </NavLink>
 
-            <Link
-              className="signup-btn"
+            <NavLink
               to="/signup"
+              className="signup-btn"
             >
               Register
-            </Link>
+            </NavLink>
           </>
         )}
 
