@@ -19,7 +19,7 @@ export default function Signup() {
 
     try {
       const res = await axios.post(
-        "https://eventhub-backend-tt0w.onrender.com",
+        "https://eventhub-backend-tt0w.onrender.com/api/auth/signup",
         form
       );
 

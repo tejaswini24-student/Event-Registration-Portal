@@ -23,9 +23,7 @@ export default function Events() {
 
   const fetchEvents = async () => {
 
-    const res = await axios.get(
-      "http://localhost:5000/api/events"
-    );
+    const res = await axios.get("https://eventhub-backend-tt0w.onrender.com/api/events");
 
     setEvents(res.data);
 
@@ -36,7 +34,7 @@ export default function Events() {
     if (!user) return;
 
     const res = await axios.get(
-      "https://eventhub-backend-tt0w.onrender.com"
+      "https://eventhub-backend-tt0w.onrender.com/api/register"
     );
 
     const myRegistrations = res.data
@@ -60,7 +58,7 @@ export default function Events() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/register",
+        "https://eventhub-backend-tt0w.onrender.com/api/register",
         {
           name: user.name,
           email: user.email,
