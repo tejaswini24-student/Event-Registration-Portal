@@ -18,8 +18,8 @@ export default function Dashboard() {
     try {
 
       const [regRes, eventRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/register"),
-        axios.get("http://localhost:5000/api/events")
+        axios.get("https://eventhub-backend-tt0w.onrender.com"),
+        axios.get("https://eventhub-backend-tt0w.onrender.com")
       ]);
 
       const myRegs = regRes.data.filter(

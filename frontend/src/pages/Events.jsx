@@ -36,7 +36,7 @@ export default function Events() {
     if (!user) return;
 
     const res = await axios.get(
-      "http://localhost:5000/api/register"
+      "https://eventhub-backend-tt0w.onrender.com"
     );
 
     const myRegistrations = res.data

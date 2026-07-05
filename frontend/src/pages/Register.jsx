@@ -15,7 +15,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:5000/api/register", form);
+    await axios.post("https://eventhub-backend-tt0w.onrender.com", form);
 
     alert("Registered Successfully!");
   };
